@@ -47,7 +47,7 @@ LambdaRank::get_gradient(const SyncArray<float_type> &y, const SyncArray<float_t
         std::sort(label_idx.begin(), label_idx.end(),
                   [](std::pair<float_type, int> a, std::pair<float_type, int> b) { return a.first > b.first; });
 
-        std::mt19937 gen(std::rand());
+        //std::mt19937 gen(std::rand());
         for (int i = 0; i < len; ++i) {
             int j = i + 1;
             while (j < len && label_idx[i].first == label_idx[j].first) j++;
